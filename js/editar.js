@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             email: email || undefined,
         };
 
+
         try {
             const response = await fetch(`http://localhost:8000/api/user/atualizar/${userId}`, {
                 method: 'PUT',
