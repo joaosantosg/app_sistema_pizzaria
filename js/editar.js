@@ -35,16 +35,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('editarUsuarioForm').addEventListener('submit', async function (event) {
         event.preventDefault();
 
+        console.log('Enviando dados...');
         const nome = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const senha = document.getElementById('password').value;
-        const confirmacaoSenha = document.getElementById('password_confirmation').value;
 
         const dadosUsuario = {
             name: nome || undefined,
             email: email || undefined,
-            password: senha || undefined,
-            password_confirmation: confirmacaoSenha || undefined,
         };
 
         try {
